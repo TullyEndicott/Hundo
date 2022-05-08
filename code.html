@@ -107,8 +107,10 @@
                                     }else{
                                         className = "odd"
                                     }
-                                    // template literals do not render corrwctly in Prism - see the source code
-                                    templateRows += `<tr><td class="${className}">${number}</td></tr>`;
+                        
+                                    //templateRows += `<tr><td class="${className}">${number}</td></tr>`;
+                                    // to make template literals render in Prism - use &lt; for '<' and &amp; fo '&'
+                                    templateRows += `&lt;tr>&lt;td class="${className}">${number}&lt;/td>&lt;/&tr>`;
                                 }
                         
                                 document.getElementById("results").innerHTML = templateRows;

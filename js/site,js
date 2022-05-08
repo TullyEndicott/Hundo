@@ -39,6 +39,8 @@ function getValues(){
             }
 
             templateRows += `<tr><td class="${className}">${number}</td></tr>`;
+            // to make template literals render in Prism - use &lt; for '<' and &amp; for '&'
+           // templateRows += `&lt;tr>&lt;td class="${className}">${number}&lt;/td>&lt;/&tr>`;
         }
 
         document.getElementById("results").innerHTML = templateRows;
